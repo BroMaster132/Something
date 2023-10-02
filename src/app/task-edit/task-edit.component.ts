@@ -37,7 +37,7 @@ export class TaskEditComponent implements OnInit {
   updateTask() {
     this.task = this.storage.update({
       id: this.id,
-      difficulty: this.difficulty.value,
+      difficulty: Number(this.difficulty.value),
       status: this.status.value,
       note: this.note.value,
       title: this.title.value,

@@ -8,6 +8,12 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TaskEditComponent } from './task-edit/task-edit.component';
 import { TaskViewComponent } from './task-view/task-view.component';
 import { TaskAddComponent } from './task-add/task-add.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule, MatInputModule , MatFormFieldModule,} from '@angular/material';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +27,14 @@ import { TaskAddComponent } from './task-add/task-add.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

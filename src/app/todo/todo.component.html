@@ -1,5 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<button class="btn btn-success" [routerLink]="['/tasks/add']">New task</button>
+<div class="window">
+  <button class="btn btn-success" [routerLink]="['/tasks/add']">New task</button>
 
 <div *ngIf="tasks && tasks.length > 0; else noTasks">
   <table class="table table-striped">
@@ -10,7 +11,7 @@
         <th>Note</th>
         <th>Status</th>
         <th>Difficulty</th>
-        <th></th>
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody *ngFor="let task of tasks">
@@ -19,7 +20,7 @@
         <td>{{ task.title }}</td>
         <td>{{ task.note }}</td>
         <td>{{ task.status }}</td>
-        <td>{{ task.difficulty }}</td>
+        <td ><mat-icon>{{ grades(task.difficulty) }}</mat-icon></td>
         <td>
           <button class="btn btn-light" [routerLink]="['/tasks/', task.id]">
             <i class="far fa-eye"></i>
@@ -40,5 +41,7 @@
 </div>
 
 <ng-template #noTasks>
-  <h2>Congratulations, you finished your list !</h2>
+  <h2>Congratulations, you have finished your list !</h2>
 </ng-template>
+
+</div>
